@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>د. رامي العجمي - استشاري النساء والتوليد والحقن المجهري</title>
+    <!-- استيراد خط كاييرو الأنيق -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #2c3e50;
+            line-height: 1.7;
+        }
+
+        /* الهيدر الشخصي */
+        header {
+            background: linear-gradient(135deg, #1b365d, #2980b9);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .doctor-img-container {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .doctor-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        header h1 {
+            font-size: 2.3rem;
+            margin-bottom: 5px;
+            font-weight: 900;
+        }
+
+        header h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            opacity: 0.95;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.05rem;
+            opacity: 0.85;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1b365d;
+            font-size: 1.8rem;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #2980b9;
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        /* بطاقات العيادات */
+        .clinics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .clinic-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #2980b9;
+        }
+
+        .clinic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .clinic-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #1b365d;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .clinic-card h3 i {
+            color: #2980b9;
+        }
+
+        .clinic-card p {
+            margin-bottom: 20px;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .btn-action {
+            display: inline-block;
+            background-color: #2980b9;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            width: 100%;
+            text-align: center;
+            transition: background 0.3s;
+            box-shadow: 0 4px 10px rgba(41, 128, 185, 0.2);
+        }
+
+        .btn-action:hover {
+            background-color: #1b365d;
+        }
+
+        /* قسم الطوارئ */
+        .emergency-box {
+            background: #fff8e1;
+            border: 2px solid #ffe082;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
+            color: #795548;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+
+        .emergency-box h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #d32f2f;
+        }
+
+        .emergency-box ul {
+            list-style-type: none;
+            margin: 15px 0;
+            padding-right: 10px;
+        }
+
+        .emergency-box li {
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #4e342e;
+        }
+
+        .btn-emergency {
+            background-color: #d32f2f;
+            color: white;
+            margin-top: 10px;
+        }
+        .btn-emergency:hover {
+            background-color: #b71c1c;
+        }
+
+        /* وسائل التواصل الاجتماعي */
+        .social-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 25px;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        .social-btn.facebook { background-color: #1877f2; }
+        .social-btn.whatsapp { background-color: #25d366; }
+        
+        .social-btn:hover { opacity: 0.9; }
+
+        /* السياسات والخصوصية */
+        .policies {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .policies h3 {
+            color: #1b365d;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .policies ul {
+            padding-right: 20px;
+            color: #555;
+        }
+
+        .policies li {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #1b365d;
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر الشخصي مع صورة الطبيب -->
+    <header>
+        <div class="doctor-img-container">
+            <!-- ضع رابط الصورة المباشر هنا أو اسم الصورة في نفس المجلد مثل doctor.jpg -->
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=400&auto=format&fit=crop" alt="د. رامي العجمي">
+        </div>
+        <h1>د. رامي العجمي</h1>
+        <h2>استشاري النساء والتوليد والحقن المجهري[span_1](start_span)[span_1](end_span)[span_2](start_span)[span_2](end_span)</h2>
+        <p>متابعة الحمل وعلاج تأخر الإنجاب</p>
+    </header>
+
+    <div class="container">
+
+        <!-- عيادات الطبيب -->
+        <h2 class="section-title">عناوين وأرقام العيادات للحجز</h2>
+        <div class="clinics-grid">
+            
+            <!-- التجمع الخامس -->
+            <div class="clinic-card">
+                <h3><i class="fa-solid fa-location-dot"></i> التجمع الخامس</h3>
+                <p>ش التسعين الشمالي، خلف المستشفى الجوي، مركز HCC، الدور الثالث، عيادة 3[span_3](start_span)[span_3](end_span).</p>
+                <a href="tel:01097333303" class="btn-action"><i class="fa-solid fa-phone"></i> 01097333303</a>
+            </div>
+
+            <!-- مدينتي -->
+            <div class="clinic-card">
+                <h3><i class="fa-solid fa-location-dot"></i> مدينتي</h3>
+                <p>للحجز والاستعلام المباشر عبر الرقم الموحد للعيادات.</p>
+                <a href="tel:01097333303" class="btn-action"><i class="fa-solid fa-phone"></i> 01097333303</a>
+            </div>
+
+            <!-- السويس -->
+            <div class="clinic-card">
+                <h3><i class="fa-solid fa-location-dot"></i> السويس</h3>
+                <p>للحجز والاستعلام ومواعيد الكشف بالعيادة.</p>
+                <a href="tel:01116668967" class="btn-action"><i class="fa-solid fa-phone"></i> 01116668967</a>
+            </div>
+
+        </div>
+
+        <!-- قسم الحالات الطارئة والمستشفيات -->
+        <div class="emergency-box">
+            <h3><i class="fa-solid fa-triangle-exclamation"></i> الحالات الطارئة</h3>
+            <p>لو عندك حالة طارئة برجاء الاتصال فوراً على تليفون الطبيب أو التوجه لأقرب مستشفى:</p>
+            <ul>
+                <li>🔹 مستشفى قطامية كلينيك (التجمع)</li>
+                <li>🔹 مستشفى الأمل (السويس)</li>
+                <li>🔹 مستشفى شفا (الشروق)</li>
+            </ul>
+            <p style="margin-top: 15px; font-weight: bold;">أرقام الطوارئ المباشرة:</p>
+            <a href="tel:01111774796" class="btn-action btn-emergency"><i class="fa-solid fa-phone-volume"></i> تليفون الطوارئ: 01111774796</a>
+        </div>
+
+        <!-- التواصل الاجتماعي -->
+        <div class="social-section">
+            <h3 style="color: #1b365d; font-size: 1.4rem;">تابع صفحتنا الرسمية</h3>
+            <p style="color: #666; margin-top: 5px;">للاستفسارات الطبية ومتابعة كل جديد</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/1EjWNGX1AT/?mibextid=wwXIfr" target="_blank" class="social-btn facebook">
+                    <i class="fa-brands fa-facebook-f"></i> صفحة الفيسبوك
+                </a>
+                <a href="https://wa.me/201097333303" target="_blank" class="social-btn whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> تواصل واتساب
+                </a>
+            </div>
+        </div>
+
+        <!-- سياسة الإلغاء والاسترجاع -->
+        <div class="policies">
+            <h3>سياسة الإلغاء والاسترجاع</h3>
+            <ul>
+                <li>يتم حجز المواعيد مسبقاً عبر الهاتف أو الرسائل[span_4](start_span)[span_4](end_span).</li>
+                <li>في حال الرغبة في إلغاء أو تعديل الموعد، يُرجى التواصل قبل الموعد بمدة لا تقل عن 24 ساعة[span_5](start_span)[span_5](end_span).</li>
+                <li>رسوم الكشف لا تُسترد بعد إتمام الزيارة الطبية[span_6](start_span)[span_6](end_span).</li>
+                <li>في حال دفع أي مقدم لخدمات طبية خاصة، يتم توضيح سياسة الاسترجاع للمريضة قبل الدفع[span_7](start_span)[span_7](end_span).</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 - د. رامي العجمي</p>
+    </footer>
+
+</body>
+</html>
