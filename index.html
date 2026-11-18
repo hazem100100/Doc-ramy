@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>د. رامي العجمي - استشاري النساء والتوليد والحقن المجهري</title>
-    <!-- استيراد خط كايرو الأنيق -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <!-- FontAwesome للأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <style>
         * {
             margin: 0;
@@ -18,29 +15,30 @@
         }
 
         body {
-            background-color: #f4f7f6;
-            color: #2c3e50;
-            line-height: 1.7;
+            background-color: #f0f4f8;
+            color: #1e293b;
+            line-height: 1.8;
         }
 
-        /* الهيدر الشخصي */
         header {
-            background: linear-gradient(135deg, #1b365d, #2980b9);
-            color: white;
-            padding: 50px 20px;
+            background: linear-gradient(135deg, #0f294a 0%, #1e56a0 100%);
+            color: #ffffff;
+            padding: 55px 20px 45px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-shadow: 0 10px 25px rgba(15, 41, 74, 0.15);
         }
 
         .doctor-img-container {
-            width: 140px;
-            height: 140px;
+            width: 155px;
+            height: 155px;
             margin: 0 auto 20px;
             border-radius: 50%;
             overflow: hidden;
-            border: 4px solid rgba(255, 255, 255, 0.8);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-            background-color: #fff;
+            border: 5px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            background-color: #e2e8f0;
         }
 
         .doctor-img-container img {
@@ -51,201 +49,239 @@
         }
 
         header h1 {
-            font-size: 2.3rem;
-            margin-bottom: 5px;
+            font-size: 2.2rem;
             font-weight: 900;
+            margin-bottom: 6px;
         }
 
         header h2 {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             font-weight: 600;
-            opacity: 0.95;
-            margin-bottom: 10px;
+            color: #bae6fd;
+            margin-bottom: 8px;
         }
 
         header p {
-            font-size: 1.05rem;
-            opacity: 0.85;
+            font-size: 1rem;
+            color: #e2e8f0;
         }
 
         .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
+            max-width: 960px;
+            margin: 35px auto;
+            padding: 0 18px;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 30px;
-            color: #1b365d;
-            font-size: 1.8rem;
-            font-weight: 700;
-            position: relative;
+            margin-bottom: 28px;
+            color: #0f294a;
+            font-size: 1.65rem;
+            font-weight: 800;
         }
 
         .section-title::after {
             content: '';
             display: block;
-            width: 60px;
-            height: 3px;
-            background-color: #2980b9;
+            width: 55px;
+            height: 4px;
+            background-color: #1e56a0;
             margin: 8px auto 0;
             border-radius: 2px;
         }
 
-        /* بطاقات العيادات */
         .clinics-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 20px;
+            margin-bottom: 35px;
         }
 
         .clinic-card {
-            background: white;
-            border-radius: 12px;
+            background: #ffffff;
+            border-radius: 16px;
             padding: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-top: 4px solid #2980b9;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            border-top: 5px solid #1e56a0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.25s ease;
         }
 
         .clinic-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
         }
 
         .clinic-card h3 {
             font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: #1b365d;
+            color: #0f294a;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
         .clinic-card h3 i {
-            color: #2980b9;
+            color: #1e56a0;
         }
 
         .clinic-card p {
+            color: #475569;
+            font-size: 0.98rem;
             margin-bottom: 20px;
-            color: #555;
-            font-size: 0.95rem;
         }
 
-        .btn-action {
-            display: inline-block;
-            background-color: #2980b9;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
+        .btn-call {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #1e56a0;
+            color: #ffffff;
+            padding: 12px;
+            border-radius: 10px;
             text-decoration: none;
-            font-weight: 600;
-            width: 100%;
-            text-align: center;
-            transition: background 0.3s;
-            box-shadow: 0 4px 10px rgba(41, 128, 185, 0.2);
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: background 0.25s;
         }
 
-        .btn-action:hover {
-            background-color: #1b365d;
+        .btn-call:hover {
+            background-color: #0f294a;
         }
 
-        /* قسم الطوارئ */
         .emergency-box {
-            background: #fff8e1;
-            border: 2px solid #ffe082;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 40px;
-            color: #795548;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            background: #fffbeb;
+            border: 2px solid #fde68a;
+            border-right: 6px solid #dc2626;
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 35px;
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.05);
         }
 
         .emergency-box h3 {
+            color: #dc2626;
             font-size: 1.4rem;
-            margin-bottom: 15px;
+            font-weight: 800;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
             gap: 10px;
-            color: #d32f2f;
         }
 
-        .emergency-box ul {
-            list-style-type: none;
-            margin: 15px 0;
-            padding-right: 10px;
-        }
-
-        .emergency-box li {
-            margin-bottom: 8px;
+        .emergency-box p {
+            color: #334155;
             font-weight: 600;
-            color: #4e342e;
+            margin-bottom: 14px;
+        }
+
+        .hospital-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .hospital-list li {
+            background: #ffffff;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: #1e293b;
+            border: 1px solid #fef3c7;
+        }
+
+        .hospital-list li i {
+            color: #dc2626;
+            margin-left: 8px;
         }
 
         .btn-emergency {
-            background-color: #d32f2f;
-            color: white;
-            margin-top: 10px;
-        }
-        .btn-emergency:hover {
-            background-color: #b71c1c;
+            background-color: #dc2626;
         }
 
-        /* وسائل التواصل الاجتماعي */
+        .btn-emergency:hover {
+            background-color: #b91c1c;
+        }
+
         .social-section {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 30px 20px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            margin-bottom: 35px;
+        }
+
+        .social-section h3 {
+            color: #0f294a;
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+
+        .social-section p {
+            color: #64748b;
+            margin-bottom: 20px;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-top: 20px;
             flex-wrap: wrap;
         }
 
         .social-btn {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 12px 25px;
-            border-radius: 8px;
-            color: white;
+            justify-content: center;
+            gap: 10px;
+            padding: 13px 28px;
+            border-radius: 10px;
+            color: #ffffff;
             text-decoration: none;
-            font-weight: 600;
-            transition: opacity 0.3s;
+            font-weight: 700;
+            font-size: 1rem;
+            min-width: 190px;
+            transition: transform 0.2s, opacity 0.2s;
         }
 
-        .social-btn.facebook { background-color: #1877f2; }
-        .social-btn.whatsapp { background-color: #25d366; }
-        
-        .social-btn:hover { opacity: 0.9; }
+        .social-btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.95;
+        }
 
-        /* السياسات والخصوصية */
+        .social-btn.facebook {
+            background-color: #1877f2;
+        }
+
+        .social-btn.whatsapp {
+            background-color: #25d366;
+        }
+
         .policies {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin-bottom: 40px;
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            margin-bottom: 35px;
         }
 
         .policies h3 {
-            color: #1b365d;
-            margin-bottom: 15px;
+            color: #0f294a;
             font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .policies ul {
-            padding-right: 20px;
-            color: #555;
+            padding-right: 22px;
+            color: #475569;
         }
 
         .policies li {
@@ -255,71 +291,69 @@
 
         footer {
             text-align: center;
-            padding: 25px;
-            background: #1b365d;
-            color: white;
+            padding: 22px;
+            background: #0f294a;
+            color: #cbd5e1;
             font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
-    <!-- الهيدر الشخصي مع صورة الطبيب المحلية -->
     <header>
         <div class="doctor-img-container">
-            <img src="doctor.jpg" alt="د. رامي العجمي">
+            <img id="docPhoto" src="doctor.jpg" alt="د. رامي العجمي">
         </div>
         <h1>د. رامي العجمي</h1>
-        <h2>استشاري النساء والتوليد والحقن المجهري[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span)</h2>
+        <h2>استشاري النساء والتوليد والحقن المجهري</h2>
         <p>متابعة الحمل وعلاج تأخر الإنجاب</p>
     </header>
 
     <div class="container">
 
-        <!-- عيادات الطبيب -->
         <h2 class="section-title">عناوين وأرقام العيادات للحجز</h2>
         <div class="clinics-grid">
             
-            <!-- التجمع الخامس -->
             <div class="clinic-card">
-                <h3><i class="fa-solid fa-location-dot"></i> التجمع الخامس</h3>
-                <p>ش التسعين الشمالي، خلف المستشفى الجوي، مركز HCC، الدور الثالث، عيادة 3[span_2](start_span)[span_2](end_span).</p>
-                <a href="tel:01097333303" class="btn-action"><i class="fa-solid fa-phone"></i> 01097333303</a>
+                <div>
+                    <h3><i class="fa-solid fa-location-dot"></i> عيادة التجمع الخامس</h3>
+                    <p>ش التسعين الشمالي، خلف المستشفى الجوي، مركز HCC، الدور الثالث، عيادة 3.</p>
+                </div>
+                <a href="tel:01097333303" class="btn-call"><i class="fa-solid fa-phone"></i> 01097333303</a>
             </div>
 
-            <!-- مدينتي -->
             <div class="clinic-card">
-                <h3><i class="fa-solid fa-location-dot"></i> مدينتي</h3>
-                <p>للحجز والاستعلام المباشر عبر الرقم الموحد للعيادات.</p>
-                <a href="tel:01097333303" class="btn-action"><i class="fa-solid fa-phone"></i> 01097333303</a>
+                <div>
+                    <h3><i class="fa-solid fa-location-dot"></i> عيادة مدينتي</h3>
+                    <p>للحجز والاستعلام ومعرفة مواعيد الكشف عبر الرقم الموحد للعيادات.</p>
+                </div>
+                <a href="tel:01097333303" class="btn-call"><i class="fa-solid fa-phone"></i> 01097333303</a>
             </div>
 
-            <!-- السويس -->
             <div class="clinic-card">
-                <h3><i class="fa-solid fa-location-dot"></i> السويس</h3>
-                <p>للحجز والاستعلام ومواعيد الكشف بالعيادة.</p>
-                <a href="tel:01116668967" class="btn-action"><i class="fa-solid fa-phone"></i> 01116668967</a>
+                <div>
+                    <h3><i class="fa-solid fa-location-dot"></i> عيادة السويس</h3>
+                    <p>للحجز والاستعلام ومواعيد الكشف بالعيادة في السويس.</p>
+                </div>
+                <a href="tel:01116668967" class="btn-call"><i class="fa-solid fa-phone"></i> 01116668967</a>
             </div>
 
         </div>
 
-        <!-- قسم الحالات الطارئة والمستشفيات -->
         <div class="emergency-box">
-            <h3><i class="fa-solid fa-triangle-exclamation"></i> الحالات الطارئة</h3>
-            <p>لو عندك حالة طارئة برجاء الاتصال فوراً على تليفون الطبيب أو التوجه لأقرب مستشفى:</p>
-            <ul>
-                <li>🔹 مستشفى قطامية كلينيك (التجمع)</li>
-                <li>🔹 مستشفى الأمل (السويس)</li>
-                <li>🔹 مستشفى شفا (الشروق)</li>
+            <h3><i class="fa-solid fa-kit-medical"></i> في حالة الطوارئ</h3>
+            <p>برجاء الاتصال فوراً على تليفون الطوارئ المباشر أو التوجه لأقرب مستشفى من المستشفيات التالية لمناظرة الحالة وإبلاغ د. رامي فوراً:</p>
+            <ul class="hospital-list">
+                <li><i class="fa-regular fa-hospital"></i> مستشفى قطامية كلينيك (التجمع)</li>
+                <li><i class="fa-regular fa-hospital"></i> مستشفى الأمل (السويس)</li>
+                <li><i class="fa-regular fa-hospital"></i> مستشفى شفا (الشروق)</li>
             </ul>
-            <p style="margin-top: 15px; font-weight: bold;">أرقام الطوارئ المباشرة:</p>
-            <a href="tel:01111774796" class="btn-action btn-emergency"><i class="fa-solid fa-phone-volume"></i> تليفون الطوارئ: 01111774796</a>
+            <a href="tel:01111774796" class="btn-call btn-emergency"><i class="fa-solid fa-phone-volume"></i> تليفون الطوارئ: 01111774796</a>
         </div>
 
-        <!-- التواصل الاجتماعي -->
         <div class="social-section">
-            <h3 style="color: #1b365d; font-size: 1.4rem;">تابع صفحتنا الرسمية</h3>
-            <p style="color: #666; margin-top: 5px;">للاستفسارات الطبية ومتابعة كل جديد</p>
+            <h3>تواصل معنا وتابع الصفحة الرسمية</h3>
+            <p>للحجز عبر الرسائل أو متابعة النصائح الطبية والتوعوية</p>
             <div class="social-links">
                 <a href="https://www.facebook.com/share/1EjWNGX1AT/?mibextid=wwXIfr" target="_blank" class="social-btn facebook">
                     <i class="fa-brands fa-facebook-f"></i> صفحة الفيسبوك
@@ -330,22 +364,33 @@
             </div>
         </div>
 
-        <!-- سياسة الإلغاء والاسترجاع -->
         <div class="policies">
-            <h3>سياسة الإلغاء والاسترجاع</h3>
+            <h3><i class="fa-solid fa-file-shield"></i> سياسة الحجز والإلغاء</h3>
             <ul>
-                <li>يتم حجز المواعيد مسبقاً عبر الهاتف أو الرسائل[span_3](start_span)[span_3](end_span).</li>
-                <li>في حال الرغبة في إلغاء أو تعديل الموعد، يُرجى التواصل قبل الموعد بمدة لا تقل عن 24 ساعة[span_4](start_span)[span_4](end_span).</li>
-                <li>رسوم الكشف لا تُسترد بعد إتمام الزيارة الطبية[span_5](start_span)[span_5](end_span).</li>
-                <li>في حال دفع أي مقدم لخدمات طبية خاصة، يتم توضيح سياسة الاسترجاع للمريضة قبل الدفع[span_6](start_span)[span_6](end_span).</li>
+                <li>يتم حجز المواعيد مسبقاً عبر الهاتف أو الرسائل.</li>
+                <li>في حال الرغبة في إلغاء أو تعديل الموعد، يُرجى التواصل قبل الموعد بمدة لا تقل عن 24 ساعة.</li>
+                <li>رسوم الكشف لا تُسترد بعد إتمام الزيارة الطبية.</li>
+                <li>المحتوى المنشور على الصفحة لأغراض التوعية الطبية فقط ولا يُغني عن الاستشارة المباشرة.</li>
             </ul>
         </div>
 
     </div>
 
     <footer>
-        <p>جميع الحقوق محفوظة © 2026 - د. رامي العجمي</p>
+        <p>جميع الحقوق محفوظة © 2026 - عيادات د. رامي العجمي</p>
     </footer>
+
+    <script>
+        const img = document.getElementById('docPhoto');
+        const names = ['doctor.jpg', 'doctor.JPG', 'doctor.jpg.JPG', 'doctor.png', 'doctor.jpeg'];
+        let index = 0;
+        img.onerror = function() {
+            index++;
+            if (index < names.length) {
+                img.src = names[index];
+            }
+        };
+    </script>
 
 </body>
 </html>
